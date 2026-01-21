@@ -20,9 +20,10 @@ jobs:
       matrix:
         os:
           # x86-64
-          - macos-13
+          - macos-15-intel
           # M1 processor
           #- macos-14
+          #- macos-15
 
     steps:
       - name: Check out repository
@@ -33,6 +34,5 @@ jobs:
 
       - name: Build it
         env:
-          MY_OS_NAME: macos
           IS_RELEASE: 0
         run: script/cibuild $FLAGS

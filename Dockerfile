@@ -1,6 +1,6 @@
 # Dockerfile
 #
-# Copyright (C) 2020 Stephen G. Tuggy and other vsUTCS contributors
+# Copyright (C) 2020-2026 Stephen G. Tuggy and other vsUTCS contributors
 #
 # This file is part of Vega Strike: Upon the Coldest Sea ("vsUTCS").
 #
@@ -21,7 +21,7 @@
 ARG  from
 FROM ${from}
 
-WORKDIR /usr/src/vsUTCS
+WORKDIR /usr/local/src/vsUTCS
 
 COPY . .
 
