@@ -36,13 +36,9 @@ jobs:
             ARTIFACT_EXT: 'rpm'
           - FROM:     'fedora:42'
             ARTIFACT_EXT: 'rpm'
-          - FROM:     'fedora:41'
+          - FROM:     'rockylinux_rockylinux:10.1'
             ARTIFACT_EXT: 'rpm'
-          - FROM:     'fedora:40'
-            ARTIFACT_EXT: 'rpm'
-          - FROM:     'rockylinux_rockylinux:10.0'
-            ARTIFACT_EXT: 'rpm'
-          - FROM:     'rockylinux_rockylinux:9.6'
+          - FROM:     'rockylinux_rockylinux:9.7'
             ARTIFACT_EXT: 'rpm'
 
     steps:
@@ -66,7 +62,6 @@ jobs:
       env:
         FROM:       ${{ matrix.FROM }}
         FLAGS:      ''
-        MY_OS_NAME: linux
         IS_RELEASE: 1
       run: script/cibuild $FLAGS
 
